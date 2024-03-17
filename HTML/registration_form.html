@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Registration Form</title>
+</head>
+<body>
+
+<h2>Student Registration Form</h2>
+
+<form action="submit_registration.php" method="POST">
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" required><br><br>
+
+  <label for="dob">Date of Birth:</label><br>
+  <input type="date" id="dob" name="dob" required><br><br>
+
+  <label for="gender">Gender:</label><br>
+  <input type="radio" id="male" name="gender" value="male" required>
+  <label for="male">Male</label>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br><br>
+
+  <label for="address">Address:</label><br>
+  <textarea id="address" name="address" rows="4" required></textarea><br><br>
+
+  <label for="telephone">Telephone:</label><br>
+  <input type="tel" id="telephone" name="telephone" required><br><br>
+
+  <label for="email">Email Address:</label><br>
+  <input type="email" id="email" name="email" required><br><br>
+
+  <label for="course">Course:</label><br>
+  <select id="course" name="course" required>
+    <option value="">Select Course</option>
+    <option value="Math">Math</option>
+    <option value="Science">Science</option>
+    <option value="History">History</option>
+    <option value="English">English</option>
+  </select><br><br>
+
+  <button type="submit">Register</button>
+  <button type="button" onclick="cancelRegistration()">Cancel</button>
+</form>
+
+<script>
+function cancelRegistration() {
+  // Implement cancellation logic here, e.g., redirecting to another page or displaying a confirmation message
+  alert("Registration canceled.");
+}
+</script>
+
+</body>
+</html>
