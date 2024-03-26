@@ -1,0 +1,59 @@
+// Interface definition
+abstract class Vehicle {
+  void start();
+}
+
+// Parent class
+class Car implements Vehicle {
+  String model;
+  int year;
+
+  Car(this.model, this.year);
+
+  @override
+  void start() {
+    print('Car started.');
+  }
+
+  void displayInfo() {
+    print('Model: $model, Year: $year');
+  }
+}
+
+// Subclass
+class ElectricCar extends Car {
+  ElectricCar(String model, int year) : super(model, year);
+
+  @override
+  void start() {
+    print('Electric car started.');
+  }
+}
+
+// Method to read data from a file and initialize an instance of a class
+Car initializeCarFromDataFile(String filePath) {
+  // Logic to read data from the file and parse it
+  String model = 'Tesla';
+  int year = 2022;
+  return Car(model, year);
+}
+
+// Method demonstrating the use of a loop
+void demonstrateLoop() {
+  for (int i = 0; i < 3; i++) {
+    print('Loop iteration: $i');
+  }
+}
+
+void main() {
+  // Initialize an instance of a class with data from a file
+  Car myCar = initializeCarFromDataFile('data/data_file.txt');
+  myCar.displayInfo();
+
+  // Demonstrate the use of a loop
+  demonstrateLoop();
+
+  // Create an instance of a subclass and call overridden method
+  ElectricCar myElectricCar = ElectricCar('Nissan Leaf', 2023);
+  myElectricCar.start();
+}

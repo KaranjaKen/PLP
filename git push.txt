@@ -4,7 +4,7 @@ git add .
 
 git status
 
-git commit -m "Week 3"
+git commit -m "Week 4"
 git branch -M main
 git remote add origin https://github.com/KaranjaKen/PLP.git
 git push -u origin main
